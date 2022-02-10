@@ -54,7 +54,7 @@ input {
   padding: 8px 10px;
   font-family: montserrat, sans-serif;
   border-radius: var(--border-radius);
-  border: 1px solid var(--dark);
+  border: 1px solid var(--dark-color);
 }
 button {
   width: 130px;
