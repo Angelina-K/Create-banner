@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <title>Angelina's project</title>
+    <link rel="stylesheet" href="/style/main.css" />
+  </head>
+  <body onload="onInit()">
+    <div class="modal" hidden></div>
+    <h1>Create your own banner.</h1>
+    <form
+      onsubmit="event.preventDefault(),createNewBanner(document.getElementById('img-url').value,
+    document.getElementById('link').value)"
+    >
+      <label for="img-url">Image Url</label>
+      <input
+        id="img-url"
+        type="url"
+        placeholder="Enter image url"
+        autofocus
+        required
+      />
+      <label for="link">Link</label>
+      <input id="link" type="url" placeholder="Enter link" required />
+      <button>Create banner</button>
+    </form>
+    <div class="action-btns flex">
+      <button onclick="onSaveBanners()" class="action-btn" hidden>
+        Save banners
+      </button>
+      <button onclick="onClear()" class="action-btn" hidden>Clear all</button>
+    </div>
+
+    <div id="banners-list"></div>
+
+    <script src="js/service/util-service.js"></script>
+    <script type="module" src="js/controller.js"></script>
+  </body>
+</html>
